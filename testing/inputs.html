@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Testing</title>
+</head>
+<body>
+<div class="container">
+  <!-- Input fields -->
+  <div class="container">
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Disabled and ReadOnly -->
+  <div class="container">
+    <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+    <input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+
+    <div class="container">
+      <form>
+        <fieldset disabled>
+          <legend>Disabled fieldset example</legend>
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+          </div>
+          <div class="mb-3">
+            <label for="disabledSelect" class="form-label">Disabled select menu</label>
+            <select id="disabledSelect" class="form-select">
+              <option>Disabled select</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+              <label class="form-check-label" for="disabledFieldsetCheck">
+                Can't check this
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <!-- file input -->
+  <div class="container">
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Default file input example</label>
+      <input class="form-control" type="file" id="formFile">
+    </div>
+    <div class="mb-3">
+      <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+      <input class="form-control" type="file" id="formFileMultiple" multiple>
+    </div>
+    <div class="mb-3">
+      <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+      <input class="form-control" type="file" id="formFileDisabled" disabled>
+    </div>
+    <div class="mb-3">
+      <label for="formFileSm" class="form-label">Small file input example</label>
+      <input class="form-control form-control-sm" id="formFileSm" type="file">
+    </div>
+    <div>
+      <label for="formFileLg" class="form-label">Large file input example</label>
+      <input class="form-control form-control-lg" id="formFileLg" type="file">
+    </div>
+  </div>
+
+  <!-- Color Picker -->
+  <div class="container">
+    <label for="exampleColorInput" class="form-label">Color picker</label>
+    <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+  </div>
+
+  <!-- Basic Selects -->
+  <div class="container">
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+
+  <!-- Auto complete Select -->
+  <div class="container">
+    <label for="exampleDataList" class="form-label">Datalist example</label>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+    <datalist id="datalistOptions">
+      <option value="San Francisco">
+      <option value="New York">
+      <option value="Seattle">
+      <option value="Los Angeles">
+      <option value="Chicago">
+    </datalist>
+  </div>
+
+  <!-- Checkboxes -->
+  <div class="container">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" disabled>
+      <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+    </div>
+  </div>
+
+  <!-- boxes -->
+  <div class="container">
+    <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+
+    <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+
+    <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+    <label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+
+    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+    <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+  </div>
+
+  <!-- slider -->
+  <div class="container">
+    <label for="customRange3" class="form-label">Example range</label>
+    <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+  </div>
+
+  <!-- Multiple Inputs -->
+  <div class="container">
+    <div class="input-group">
+      <span class="input-group-text">First and last name</span>
+      <input type="text" aria-label="First name" class="form-control">
+      <input type="text" aria-label="Last name" class="form-control">
+    </div>
+  </div>
+
+  <!-- Multiple Add ons -->
+  <div class="container">
+    <div class="input-group mb-3">
+      <span class="input-group-text">$</span>
+      <span class="input-group-text">0.00</span>
+      <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+      <span class="input-group-text">$</span>
+      <span class="input-group-text">0.00</span>
+    </div>
+  </div>
+
+  <!-- Inputs with buttons -->
+  <div class="container">
+    <div class="input-group mb-3">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+      <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+    </div>
+
+    <div class="input-group mb-3">
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+      <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons">
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+    </div>
+  </div>
+
+  <!-- Inputs with drop downs -->
+  <div class="container">
+    <div class="input-group mb-3">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+      <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" aria-label="Text input with dropdown button">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+
+    <div class="input-group">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action before</a></li>
+        <li><a class="dropdown-item" href="#">Another action before</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+      <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Inputs with btn and drop down -->
+  <div class="container">
+    <div class="input-group mb-3">
+      <button type="button" class="btn btn-outline-secondary">Action</button>
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+      <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+      <button type="button" class="btn btn-outline-secondary">Action</button>
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
