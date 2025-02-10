@@ -13,8 +13,8 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-brand bg-dark justify-content-start">
-        <a class="navbar-brand invisible">Navbar</a>
+    <nav class="navbar navbar-brand bg-dark justify-content-start" aria-label="Main navigation">
+        <div class="navbar-brand invisible">Navbar</div>
     </nav>
 </header>
 <main>
@@ -28,19 +28,19 @@
                 <form>
                     <div class="mb-3">
                         <label for="login-email-input" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="login-email-input" aria-describedby="emailHelp">
-                        <div class="form-text">We'll never share your email with anyone else.</div>
+                        <input type="email" class="form-control" id="login-email-input" aria-describedby="emailHelp" aria-required="true">
+                        <div class="form-text" aria-live="polite">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
                         <label for="login-password-input" class="form-label">Password</label>
                         <input type="password" class="form-control" id="login-password-input">
                     </div>
-                    <button type="button" id="login-form-btn" class="btn btn-primary">Login</button>
+                    <button type="submit" id="login-form-btn" class="btn btn-primary">Login</button>
                 </form>
             </div>
             <div>
-                <div class="form-text">Don't have an account?</div>
-                <a class="form-text" id="login-as-guest">Enter as guest</a>
+                <div class="form-text d-inline">Don't have an account?</div>
+                <div class="form-text link-info d-inline" id="login-as-guest" role="link" aria-label="Enter as guest">Enter as guest</div>
             </div>
         </div>
     </div>

@@ -13,41 +13,47 @@
 </head>
 <body>
 
-<header>
-    <nav class="navbar navbar-brand bg-dark justify-content-between">
+<header role="banner">
+    <nav role="navigation" class="navbar navbar-brand bg-dark justify-content-between" aria-label="Main navigation">
         <ul>
             <!-- This link would just point to this page anyway -->
-            <li><a class="navbar-brand" href="">Home</a></li>
+            <li class="nav-item"><a href="">Home</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <div class="container">
-        <div id="landing-page-welcome" class="card-header"></div>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="../html/web_dev_1.html" class="btn btn-secondary">Web Dev
-                        <div class="card-box fade-image">
-                            <img src="../img/web_dev_img.jpg" alt="Sample Image">
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="../html/web_dev_1.html" class="btn btn-secondary">Application Design
-                        <div class="card-box fade-image">
-                            <img src="../img/app_design_img.jpg" alt="Sample Image">
-                        </div>
-                    </a>
-                </div>
-            </div>
+<main role="main">
+    <div id="landing-page-welcome" class="card-header"></div>
+    <div class="container mt-4 row">
+        <div class="col-md-4 landing-page-box">
+            <a href="../html/web_dev_1.html" class="btn btn-secondary">Web Dev
+                <figure class="card-box fade-image">
+                    <img src="../img/web_dev_img.jpg" alt="an image of a kitten laying on a mac keyboard">
+                    <figcaption class="figure-caption">I got this off of Canvas.</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="col-md-4 landing-page-box">
+            <a href="../html/web_dev_1.html" class="btn btn-secondary">Application Design
+                <figure class="card-box fade-image">
+                    <img src="../img/app_design_img.jpg" alt="an image of a simple design of the internet">
+                    <figcaption class="figure-caption">I got this off of Canvas.</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="col-md-4 landing-page-box">
+            <a href="../html/web_dev_1.html" class="btn btn-secondary">About Me
+                <figure class="card-box fade-image">
+                    <img src="../img/placeholder.png" alt="an image of a simple design of the internet">
+                    <figcaption class="figure-caption"> >:) </figcaption>
+                </figure>
+            </a>
         </div>
     </div>
 </main>
 
-<footer class="page-footer fixed-bottom bg-secondary">
-    <p>&copy Logan Parkhurst</p>
+<footer role="contentinfo" class="page-footer fixed-bottom bg-secondary">
+    <p><small>&copy Logan Parkhurst</small></p>
 </footer>
 
 <script type="module" src="../js/landingPage.js"></script>
