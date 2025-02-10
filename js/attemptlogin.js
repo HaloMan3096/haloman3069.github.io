@@ -7,7 +7,7 @@ class User {
 }
 
 /* Our make shift database */
-const users = [ new User("name", "email", "password"),
+const users = [ new User("name", "TestEmail@testmail.com", "superCoolPas"),
 new User("Guest", "GuestEmail@testmail.com", "GuestPassword")];
 
 /* document.cookie = "user=" + encodeURIComponent(user) + ";" + "password=" + encodeURIComponent(password) + ";" + "path=/"; */
