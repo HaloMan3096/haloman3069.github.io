@@ -53,6 +53,11 @@ html {
     color: #357ABD;
 }
 
+.skills-info ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
 figure{
     margin: 0;
 }
