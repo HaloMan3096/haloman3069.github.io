@@ -10,10 +10,10 @@ class User {
 const users = [ new User("name", "TestEmail@testmail.com", "superCoolPas"),
 new User("Guest", "GuestEmail@testmail.com", "GuestPassword")];
 
-/* document.cookie = "user=" + encodeURIComponent(user) + ";" + "password=" + encodeURIComponent(password) + ";" + "path=/"; */
 let loginFormButton = document.getElementById('login-form-btn')
 if (loginFormButton) {
     loginFormButton.addEventListener("click", function() {
+        event.preventDefault();
         let inputEmail = document.getElementById('login-email-input').value;
         let inputPassword = document.getElementById('login-password-input').value;
         AttemptLogin(inputEmail, inputPassword);
@@ -41,6 +41,9 @@ const AttemptLogin = function (inputEmail, inputPassword) {
 
     if (!userFound) {
         console.log("User not found or invalid credentials");
+        let err = document.getElementById("error-msg")
+        err.innerHTML = "Incorrect credentials.";
+        err.color = "red";
     }
 }
 
