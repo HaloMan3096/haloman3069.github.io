@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;900&family=Pirata+One&family=Raleway:wght@200;800&display=swap');
+
+body {
+    background-color: #0d1b2a;
+    color: #e7e7ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.lyrics {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.chorus {
+    font-family: 'Pirata One', cursive;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ff6347;
+    animation: wave 2s infinite alternate ease-in-out;
+}
+
+.verse {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    fill: #e76f51;
+}
+
+@keyframes wave {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(10px); }
+}
