@@ -35,7 +35,7 @@ const AttemptLogin = function (inputEmail, inputPassword) {
         if (users[i].email === inputEmail && users[i].password === inputPassword) {
             setLoginCookie(users[i].email);
             userFound = true;
-            window.location.pathname = "./haloman3069.github.io/html/landing_page.html";
+            window.location.pathname = "./haloman3069.github.io/html/landing-page.html";
         }
     }
 
