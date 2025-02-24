@@ -7,11 +7,11 @@
 }
 
 header{
+    text-align: center;
     rotate: 90deg;
-    position: fixed;
-    left: -110px;
+    position: absolute;
+    left: -250px;
 }
-
 
 h1 {
     font-family: 'Playfair Display', serif;
@@ -24,13 +24,16 @@ h1 {
     letter-spacing: 2px;
 }
 
-h1 {
+h1, h2 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(-10px);
     animation: fadeInTitle 1.5s ease-out forwards;
 }
 
+.color{
+    color: var(--primary-color);
+}
 
 @keyframes fadeInTitle {
     to {
