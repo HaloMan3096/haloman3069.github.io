@@ -1,42 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;900&family=Pirata+One&family=Raleway:wght@200;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #2c3e50;  /* Deep blue */
+    --light-color: #6c8ea5;   /* Lighter shade */
+    --dark-color: #1b2838;    /* Darker shade */
+}
+
+header{
+    rotate: 90deg;
+    position: fixed;
+    left: -110px;
+}
+
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--light-color);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInTitle 1.5s ease-out forwards;
+}
+
+
+@keyframes fadeInTitle {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 body {
-    background-color: #0d1b2a;
-    color: #e7e7ca;
+    background: linear-gradient(to bottom, var(--primary-color), var(--light-color));
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Playfair Display', serif;
+}
+
+.poem {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 10px;
     text-align: center;
 }
 
-.container {
-    max-width: 800px;
+.translator {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1em;
+    font-style: italic;
+    color: var(--dark-color);
+    margin-bottom: 15px;
 }
 
-.lyrics {
-    font-size: 1.5rem;
+.stanza {
+    font-family: 'Lora', serif;
+    font-size: 1.1em;
+    margin-bottom: 20px;
     line-height: 1.6;
+    color: var(--primary-color);
 }
 
-.chorus {
-    font-family: 'Pirata One', cursive;
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #ff6347;
-    animation: wave 2s infinite alternate ease-in-out;
+.stanza span:first-child {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-.verse {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200;
-    fill: #e76f51;
+.stanza {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-@keyframes wave {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(10px); }
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
 }

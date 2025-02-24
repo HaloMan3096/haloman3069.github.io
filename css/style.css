@@ -54,6 +54,8 @@ html {
 .web-dev-container{
     margin-top: 3px;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    padding-bottom : 10px;
 }
 
 .social-icons a {
@@ -184,6 +186,8 @@ img {
 
 #web-dev-nav{
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .web-dev-nav-item {
