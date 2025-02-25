@@ -1,0 +1,153 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+    perspective: 1200px;
+}
+
+.atom {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    margin: 0 auto;
+}
+
+.atom:hover {
+    background-color: #cccccc;
+}
+
+.pop {
+    width: 300px;
+    height: 300px;
+    animation: 5s rotate infinite;
+    animation-play-state: paused;
+    animation-timing-function: ease-in;
+}
+
+.pop:hover {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nucleus {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: radial-gradient(circle, #999999 10%, #ffffff 70%);
+    box-shadow: 0 0 20px rgba(254, 67, 101, 0.8);
+    animation: nucleusWobble 2s infinite ease-in-out;
+}
+
+.proton, .neutron {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.proton {
+    background: radial-gradient(circle, #ff4d4d, #c0392b);
+}
+
+.neutron {
+    background: radial-gradient(circle, #bbb, #888);
+}
+
+.proton:nth-child(1) {
+    top: 10px;
+    left: 15px;
+}
+
+.proton:nth-child(2) {
+    top: 25px;
+    left: 35px;
+}
+
+.proton:nth-child(3) {
+    top: 40px;
+    left: 5px;
+}
+
+.neutron:nth-child(4) {
+    top: 15px;
+    left: 35px;
+}
+
+.neutron:nth-child(5) {
+    top: 35px;
+    left: 20px;
+}
+
+.neutron:nth-child(6) {
+    top: 5px;
+    left: 25px;
+}
+
+@keyframes nucleusWobble {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+/*The animation for the electrons is in the js file*/
+.electron {
+    position: absolute;
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 30%, #0000 4%, 57%, #000 90%) #ffd700;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    filter: blur(1px);
+    opacity: 0.8;
+}
+
+/* HTML: <div class="lollipop"></div> */
+.lollipop {
+    --r: 150px; /* control the size */
+    --c1: #fd99d7;
+    --c2: #4e4cb0;
+
+    height: calc(2 * var(--r));
+    aspect-ratio: 1;
+    clip-path: circle();
+    display: flex;
+}
+
+.lollipop:before,
+.lollipop:after {
+    content: "";
+    flex: 1;
+    --g1: radial-gradient(50% 50%, var(--c1) 99%, #0000) no-repeat;
+    --g2: radial-gradient(50% 50%, var(--c2) 99%, #0000) no-repeat;
+    background: var(--g1) calc(sin(60deg) * var(--r)) calc(var(--r) / -2), var(--g2) calc(var(--r) / 2) calc(sin(-60deg) * var(--r)), var(--g1) 0 calc(-1 * var(--r)), var(--g2) calc(var(--r) / -2) calc(sin(-60deg) * var(--r)), var(--g1) calc(sin(-60deg) * var(--r)) calc(var(--r) / -2), var(--g2) calc(-1 * var(--r)) 0, var(--g1) calc(sin(-60deg) * var(--r)) calc(var(--r) / 2);
+    background-size: 200%;
+}
+
+.lollipop:after {
+    rotate: 180deg;
+}
