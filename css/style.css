@@ -51,11 +51,17 @@ html {
     margin-bottom: 20px;
 }
 
+.web-dev-final-main{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 .web-dev-container{
     margin-top: 3px;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border-radius: 10px;
     padding-bottom : 10px;
+    margin-bottom : 15px;
 }
 
 .social-icons a {
