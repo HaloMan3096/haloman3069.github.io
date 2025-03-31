@@ -1,0 +1,68 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+    /* Standard text-settings below */
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+body {
+    background-image: var(--background-image);
+}
+
+.container {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid darkslategray;
+    background-color: rgba(25, 25, 25, 0.6);
+    color: oldlace;
+    width: max-content;
+}
+
+h1 {
+    font-size: 2em;
+    background-color: #333;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+    .container {
+        background-color: rgba(255, 25, 25, 0.6);
+    }
+}
+
+/* closes 769px+ */
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+    .container {
+        background-color: rgba(255, 25, 255, 0.6);
+        max-width: 321px;
+    }
+}  /* closes 1024px+ */
