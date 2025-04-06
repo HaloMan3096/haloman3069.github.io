@@ -32,17 +32,27 @@ h1 {
     background-color: #333;
     padding: 10px;
     color: whitesmoke;
+    margin: 0;
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 footer {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+}
+
+section {
+    width: max-content;
+    margin: auto;
+    text-align: center;
+}
+
+.grid-item {
+    background-color: skyblue;
+    box-shadow: 10px 10px 10px  rgba(25, 25, 25, 0.6);
 }
 
 /* ========================================
@@ -50,19 +60,25 @@ MEDIA QUERIES!
 You can adjust the min-width numbers below, and add as many new media queries as you need.
 ======================================== */
 
-/* Minimum width for laptops. */
-@media all and (min-width: 769px) {
-    .container {
-        background-color: rgba(255, 25, 25, 0.6);
-    }
-}
-
-/* closes 769px+ */
-
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-    .container {
-        background-color: rgba(255, 25, 255, 0.6);
-        max-width: 321px;
+    h2 {
+        text-align: center;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .grid-item {
+        border: 1px solid darkslategray;
+        border-radius: 5px;
+        min-height: 290px;
     }
 }  /* closes 1024px+ */
