@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/web-dev-hidden-content-style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Link to jQuery on Google CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let section_1 = $("#section_1");
+            let section_2 = $("#section_2");
+            let section_3 = $("#section_3");
+
+            section_1.hide();
+            section_2.hide();
+            section_3.hide();
+
+            $(".btn_4").click(function () {
+                section_1.hide();
+                section_2.hide();
+                section_3.hide();
+            });
+
+            $(".btn_1").click(function () {
+                section_1.show();
+                section_2.hide();
+                section_3.hide();
+            })
+
+            $(".btn_2").click(function () {
+                section_1.hide();
+                section_2.show();
+                section_3.hide();
+            })
+
+            $(".btn_3").click(function () {
+                section_1.hide();
+                section_2.hide()
+                section_3.show();
+            })
+        })
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Hidden Content</h1>
+</header>
+
+<main>
+    <section id="author">
+        <h2>The Challenge</h2>
+        <h4>Jorge Rivera-Herrans</h4>
+    </section>
+    <section class="button-holder">
+        <button class="btn_1">Hidden 1</button>
+        <button class="btn_2">Hidden 2</button>
+        <button class="btn_3">Hidden 3</button>
+        <button class="btn_4">Hide all</button>
+    </section>
+
+    <section id="section_1" class="lyrics-section">
+        I'm supposed to choose a suitor to wear the crown<br>
+        I said I would choose as soon as I weave this shroud<br>
+        They don't know that every night<br>
+        I unthread all the work I've done<br>
+        'Cause I'd rather lie<br>
+        Than allow them to think they've won<br>
+        Though I never thought that I'd resort to this<br>
+        Just know I'll be here<br>
+        But I don't know how much longer I'll last since we saw that storm<br>
+        And though it was so close to our kingdom, it was far from the norm, unless<br>
+        Oh, could it be some kinda sign<br>
+        That my world is all about to change?<br>
+        Is it finally time for the challenge I arranged?<br>
+        Though I never thought that it would come to this<br>
+        Just know I'll be here buying you time<br>
+    </section>
+
+    <section id="section_2" class="lyrics-section">
+        Time is fleeting, it's running out<br>
+        Time to be the man of the house (oh, buying you time)<br>
+        Time is fleeting, it's running out<br>
+        Time to be the man of the house<br>
+        Whoever can string my husband's old bow<br>
+        And shoot through 12 axes cleanly<br>
+        Will be the new king, sit down at the throne<br>
+        And rule with me as his queen<br>
+    </section>
+
+    <section id="section_3" class="lyrics-section">
+        Let the arrow fly<br>
+        Once you know that your aim is true<br>
+        'Cause I'd rather die<br>
+        Than grow old without the best of you<br>
+        Though I never thought that these would be the lengths we go for love<br>
+        I would not have it any other way<br>
+        And though I never thought that it would end like this<br>
+        Just know I'll be here<br>
+        Waiting, waiting<br>
+        waiting, waiting<br>
+        (Penelope) waiting, waiting<br>
+        Oh<br>
+    </section>
+</main>
+
+<footer class="footer bottom-0">
+    &copy; Logan
+</footer>
+
+</body>
+</html>

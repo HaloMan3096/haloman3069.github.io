@@ -1,0 +1,90 @@
+
+:root {
+    --final-main-font: "Tomorrow";
+}
+
+h1 {
+    font-family: var(--final-main-font), sans-serif;
+}
+
+.info-area {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    font-family: var(--final-main-font), sans-serif;
+}
+
+.info-container {
+    font-family: var(--final-main-font), sans-serif;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 500px !important;
+}
+
+figure img {
+    max-width: 100%;
+}
+
+.color-section {
+    background-color: rgba(5, 164, 245, 0.5);
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+    display: inline-block;
+}
+
+.color-name {
+    padding-left: 10px;
+    text-align: center;
+    margin: 0 !important;
+    display: inline-block;
+}
+
+.color-use {
+    grid-area: C;
+}
+
+.color-box[data-color="#ffffff"] {
+    background-color: #ffffff;
+}
+
+.color-box[data-color="#05a4f5"] {
+    background-color: #05a4f5;
+}
+
+.color-box[data-color="#026fed"] {
+    background-color: #026fed;
+}
+
+.color-box[data-color="#1c3246"] {
+    background-color: #1c3246;
+}
+
+.cube-button {
+    background: #05a4f5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 1em 2em;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    box-shadow: 0 4px 0 #026fed, 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.cube-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #026fed, 0 4px 10px rgba(0, 0, 0, 0.15);
+}
