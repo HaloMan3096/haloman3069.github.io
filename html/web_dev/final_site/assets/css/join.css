@@ -1,0 +1,97 @@
+/* Create three columns of equal width */
+.columns {
+    float: left;
+    width: 25%;
+    padding: 8px;
+}
+
+/* Style the list */
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+/* List items */
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Grey list item */
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+/* The "Sign Up" button */
+.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.testimonial-scroll {
+    background-color: #f5f3e7;
+    padding: 2rem;
+    border-top: 4px solid #1a105e;
+    border-bottom: 4px solid #1a105e;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #1a105e;
+    margin-bottom: 1rem;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.testimonial {
+    flex: 0 0 300px;
+    scroll-snap-align: center;
+    background: #ffffff;
+    color: #1a105e;
+    border: 2px solid #bf2664;
+    padding: 1rem;
+    box-shadow: 4px 4px 0 #e84d89;
+}
+
+.join {
+    display: grid;
+}
+
+/* Change the width of the three columns to 100%
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
