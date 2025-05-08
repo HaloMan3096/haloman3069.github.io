@@ -1,6 +1,6 @@
 /* Root Variables: use to keep the theme consistent */
 :root {
-    --primary-color: #0B3DA6;
+    --primary-color: #052864;
     --secondary-color: #6c757d;
     --accent-color: #ffc107;
     --bg-color: #F5F3E7;
@@ -14,28 +14,60 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 html, body, main {
-    background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: var(--regular-font);
+}
+
+body {
+    background-image: url("../img/background.svg");
 }
 
 main {
     padding-bottom: 30px;
 }
 
+figure {
+    margin: 1em auto;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.burger-menu {
+    background-image: url("../img/burger-menu.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: var(--banner-font);
+}
+
+p {
+    font-family: var(--regular-font);
 }
 
 .nav-link-hidden {
     display: none;
+}
+
+.dropdown-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-custom {
@@ -57,32 +89,96 @@ h1 {
     outline: 1px solid var(--bg-color);
 }
 
-.welcome-banner p {
+.welcome-banner p, h1 {
     color: var(--bg-color);
 }
 
 .tagline {
-    background-color: #D9D9D9;
+    background-color: #ababab;
     color: var(--text-color) !important;
 }
 
 .info-banner {
-    background-color: var(--card-background-color);
-    color: var(--bg-color);
+    color: var(--text-color);
+    background: rgba(163, 163, 153, 0.3);
+    border: 2px solid #362e69;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
-    padding: 10px;
+    padding-bottom: 10px;
     margin-top: 10px;
+    border-radius: 5px;
+}
+
+.info-banner p {
+    padding: 10px;
+}
+
+.info-banner h3 {
+    text-align: center;
+    background: rgba(5, 164, 245, 0.3);
+    color: var(--text-color);
+    padding: 2rem;
+    box-shadow:
+            inset 0 8px 20px rgba(0, 0, 0, 0.3),
+            inset 0 -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.leader-profile {
+    background: rgba(245, 243, 231, 0.1);
+    text-align: center;
+    border: 2px solid #1a105e;
+    box-shadow:
+            inset 0 8px 20px rgba(0, 0, 0, 0.3),
+            inset 0 -4px 10px rgba(255, 255, 255, 0.3);
+    color: var(--text-color);
+    margin: 5px 3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.leader-profile:hover {
+    transform: scale(1.05);
+    box-shadow:
+            0 0 20px rgba(58, 0, 128, 0.6),
+            0 0 40px rgba(90, 30, 200, 0.5),
+            inset 0 8px 20px rgba(0, 0, 0, 0.3),
+            inset 0 -4px 10px rgba(255, 255, 255, 0.3);
+    z-index: 2;
+}
+
+.leader-profile h3 {
+    min-height: 130px;
+}
+
+.team-banner {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#meet-the-team {
+    text-align: center;
+}
+
+.leader-profiles {
+    padding: 10px;
+    display: block;
 }
 
 .button-banner {
+    color: var(--bg-color);
+    padding: 20px 20px 30px;
+    margin-top: 10px;
+
     text-align: center;
     position: sticky;
     top: 10px;
 }
 
 .cube-button {
+    text-decoration: none;
     background: #05a4f5;
-    color: white;
+    color: var(--bg-color);
     font-weight: bold;
     border: none;
     padding: 1em 2em;
@@ -101,26 +197,6 @@ h1 {
 
 .button-wrapper {
     padding: 10px;
-}
-
-.leader-profile {
-    background: #F5F3E7;
-    padding: 2rem;
-    border: 2px solid #1a105e;
-    box-shadow:
-            inset 0 8px 20px rgba(0, 0, 0, 0.3),
-            inset 0 -4px 10px rgba(255, 255, 255, 0.3);
-    color: var(--text-color);
-}
-
-.info-banner h3 {
-    background: #F5F3E7;
-    color: var(--text-color);
-    padding: 2rem;
-    border: 2px solid #1a105e;
-    box-shadow:
-            inset 0 8px 20px rgba(0, 0, 0, 0.3),
-            inset 0 -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 footer {
@@ -144,9 +220,17 @@ footer p {
     margin: 0;
 }
 
+.known-content {
+    text-align: center;
+}
+
 /* For screens that are larger than 600px */
 @media only screen and (min-width: 600px) {
     .nav-link-hidden {
         display: inline-block;
+    }
+
+    .leader-profiles {
+        display: flex;
     }
 }

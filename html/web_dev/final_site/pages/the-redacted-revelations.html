@@ -12,20 +12,8 @@
 <body>
 
 <header>
-    <nav class="nav navbar-custom">
-        <div class="dropdown">
-            <a class="navbar-brand nav-item nav-text" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                C.U.B.E
-            </a>
-
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./about-us.html">About Us</a></li>
-                <li><a class="dropdown-item" href="./faq.html">FAQ</a></li>
-                <li><a class="dropdown-item" href="./join.html">Join Us</a></li>
-                <li><a class="dropdown-item" href="./the-redacted-revelations.html">The Redacted Archive</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
+    <script src="../assets/js/load-navbar.js"></script>
 </header>
 
 <main>
@@ -35,6 +23,7 @@
         <p class="tagline">The Earth has six sides. The truth has even more. Join the movement that's cornering the
             globe—literally</p>
     </section>
+
     <section class="container known-contents">
         <section class="info-banner">
             <h3>Project C.U.B.E</h3>
@@ -48,6 +37,17 @@
             <h3>The Box Memo</h3>
             <p>An intercepted fax from 1997 that simply reads, “The edges are activating again.”</p>
         </section>
+
+        <section class="info-banner known-content">
+            <h3>Map Fragment</h3>
+            <figure>
+                <img src="../assets/img/cube-earth-2.png" alt="Cube Earth">
+                <figcaption>
+                    An image of a map, from Minecraft
+                </figcaption>
+            </figure>
+            <p>A fragment of a map showing the cube shape of the earth</p>
+        </section>
     </section>
 </main>
 
@@ -56,6 +56,7 @@
     <p class="moto">We don’t believe. We remember.</p>
 </footer>
 
+<script src="../assets/js/the-redacted-archive.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
 </body>
