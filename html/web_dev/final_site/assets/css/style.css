@@ -12,34 +12,47 @@
     --regular-font: "Montserrat", sans-serif;
 }
 
+/* Global reset and box-sizing for consistent layout */
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
+/* Base text color for the main document elements */
 html, body, main {
     color: var(--text-color);
 }
 
+/* Set background image for the whole page */
 body {
     background-image: url("../img/background.svg");
 }
 
+/* Add bottom padding to main content */
 main {
-    padding-bottom: 30px;
+    padding-bottom: 100px;
 }
 
+/* Center figure elements and images within */
 figure {
     margin: 1em auto;
     text-align: center;
 }
 
 figure img {
-    width: 100%;
+    width: 50%;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
+.leader-img img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* Hamburger menu icon styling */
 .burger-menu {
     background-image: url("../img/burger-menu.svg");
     background-repeat: no-repeat;
@@ -48,6 +61,14 @@ figure img {
     height: 50px;
 }
 
+.burger-menu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(58, 0, 128, 0.6),
+    0 0 40px rgba(90, 30, 200, 0.5);
+    z-index: 2;
+}
+
+/* Heading font weights and styles */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
@@ -56,20 +77,24 @@ h1, h2, h3 {
     font-family: var(--banner-font);
 }
 
+/* Paragraph font */
 p {
     font-family: var(--regular-font);
 }
 
+/* Used to hide navigation links on smaller screens */
 .nav-link-hidden {
     display: none;
 }
 
+/* Center content inside dropdown logo section */
 .dropdown-logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Custom navbar styling */
 .navbar-custom {
     background-color: var(--primary-color);
     display: flex;
@@ -77,12 +102,14 @@ p {
     align-items: center;
 }
 
+/* Style for nav links */
 .nav-text {
     color: var(--bg-color);
     text-decoration: none;
     padding: 2px 10px;
 }
 
+/* Banner at top of the page */
 .welcome-banner {
     background-color: var(--primary-color);
     text-align: center;
@@ -93,11 +120,13 @@ p {
     color: var(--bg-color);
 }
 
+/* Tagline section with contrasting background */
 .tagline {
     background-color: #ababab;
     color: var(--text-color) !important;
 }
 
+/* Informational banner styling */
 .info-banner {
     color: var(--text-color);
     background: rgba(163, 163, 153, 0.3);
@@ -113,68 +142,73 @@ p {
     padding: 10px;
 }
 
+/* Title inside info-banner */
 .info-banner h3 {
     text-align: center;
     background: rgba(5, 164, 245, 0.3);
     color: var(--text-color);
     padding: 2rem;
-    box-shadow:
-            inset 0 8px 20px rgba(0, 0, 0, 0.3),
-            inset 0 -4px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.3),
+    inset 0 -4px 10px rgba(255, 255, 255, 0.3);
 }
 
+/* Profile card for team leaders */
 .leader-profile {
     background: rgba(245, 243, 231, 0.1);
     text-align: center;
     border: 2px solid #1a105e;
-    box-shadow:
-            inset 0 8px 20px rgba(0, 0, 0, 0.3),
-            inset 0 -4px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.3),
+    inset 0 -4px 10px rgba(255, 255, 255, 0.3);
     color: var(--text-color);
-    margin: 5px 3px;
+    margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
     cursor: pointer;
 }
 
+/* Hover effect for profile cards */
 .leader-profile:hover {
     transform: scale(1.05);
-    box-shadow:
-            0 0 20px rgba(58, 0, 128, 0.6),
-            0 0 40px rgba(90, 30, 200, 0.5),
-            inset 0 8px 20px rgba(0, 0, 0, 0.3),
-            inset 0 -4px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(58, 0, 128, 0.6),
+    0 0 40px rgba(90, 30, 200, 0.5),
+    inset 0 8px 20px rgba(0, 0, 0, 0.3),
+    inset 0 -4px 10px rgba(255, 255, 255, 0.3);
     z-index: 2;
 }
 
+/* Min height for profile titles */
 .leader-profile h3 {
     min-height: 130px;
 }
 
+/* Container for team banner content */
 .team-banner {
     margin-top: 10px;
     padding: 10px;
 }
 
+/* Center heading text */
 #meet-the-team {
     text-align: center;
 }
 
+/* Wrapper for leader profiles */
 .leader-profiles {
     padding: 10px;
     display: block;
 }
 
+/* Section for a sticky button on scroll */
 .button-banner {
     color: var(--bg-color);
     padding: 20px 20px 30px;
     margin-top: 10px;
-
     text-align: center;
     position: sticky;
     top: 10px;
 }
 
+/* 3D-style button with depth and press effect */
 .cube-button {
     text-decoration: none;
     background: #05a4f5;
@@ -190,24 +224,24 @@ p {
     cursor: pointer;
 }
 
+/* Pressed state for cube-button */
 .cube-button:active {
     transform: translateY(4px);
     box-shadow: 0 0 0 #026fed, 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Padding around button containers */
 .button-wrapper {
     padding: 10px;
 }
 
+/* Footer fixed to bottom of screen */
 footer {
     background-color: var(--card-background-color);
     color: var(--bg-color);
-
-    /* Fix our footer to the bottom of the screen */
     position: fixed;
     bottom: 0;
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -215,16 +249,18 @@ footer {
     padding-right: 3px;
 }
 
+/* Inline footer text */
 footer p {
     display: inline-block;
     margin: 0;
 }
 
+/* Center known-content section text */
 .known-content {
     text-align: center;
 }
 
-/* For screens that are larger than 600px */
+/* Responsive design: apply changes for screens wider than 600px */
 @media only screen and (min-width: 600px) {
     .nav-link-hidden {
         display: inline-block;
